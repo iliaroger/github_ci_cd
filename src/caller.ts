@@ -5,6 +5,11 @@ export interface ICaller {
     caller: string
 }
 
+export type CallerType = {
+    name: string
+    caller: string
+}
+
 const callAPI = () => {
     return caller
 }
