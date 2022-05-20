@@ -1,17 +1,18 @@
-const caller = 'http://api.caller.com'
+const caller = 'http://api.caller.com';
 
 export interface ICaller {
-    name: string
-    caller: string
+    name: string;
+    caller: string;
 }
 
 export type CallerType = {
-    name: string
-    caller: string
-}
+    name: string;
+    lastName: string;
+    caller: string;
+};
 
 const callAPI = () => {
-    return caller
-}
+    return caller;
+};
 
-callAPI()
+callAPI();
