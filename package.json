@@ -1,0 +1,36 @@
+{
+    "name": "github_ci_cd",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.25.0",
+        "@typescript-eslint/parser": "^5.25.0",
+        "eslint": "^8.15.0",
+        "eslint-config-prettier": "^8.5.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^12.4.1",
+        "prettier": "^2.6.2",
+        "typescript": "^4.6.4"
+    },
+    "husky":{
+      "hooks": {
+        "pre-commit": "npm run lint"
+      }
+    },
+    "lint-staged": {
+        "**/*.{js,ts,jsx,tsx}": [
+            "eslint . --max-warnings 0",
+            "prettier --config .prettierrc 'src/**/*.ts' --write"
+        ]
+    }
+}
