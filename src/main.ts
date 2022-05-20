@@ -1,5 +1,5 @@
-const array1 = ['2e', 2, 'sidfhiisdufihsd']
+const array1 = ['2e', 2, 'sidfhiisdufihsd'];
 
-const parseArray1 = () => array1
+const parseArray1 = () => array1;
 
-parseArray1()
+parseArray1();
